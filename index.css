@@ -1,0 +1,91 @@
+body{
+    background-color: #052F5F;
+}
+
+/* TITLE */
+
+.title-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #005377;
+}
+
+h1{
+    padding: 0.5em;
+    border-radius: 15px;
+    background-color: #052F5F;
+}
+
+/*CAL*/
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.calculator{
+    margin-top: 2em;
+    width: 20%;
+    height: 25em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #09ECB0;
+    border-radius: 25px;
+}
+
+
+.screen{
+    background-color: #D5C67A;
+    width: 80%;
+    height:3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border-radius: 10px;
+    padding-right: 7px;
+}
+
+.num-pad{
+    margin-top: 0.5em;
+    padding: 0.5em;
+    background-color: #005377;
+    width: 80%;
+    height: 15em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.line{
+    display: flex;
+    flex: 1 1 0%;
+}
+
+
+.btn{
+    background-color: #F1A208 ; /* F1A208 */
+    width: 2rem;
+    height: 2rem;
+    margin-top: 0.5rem;
+    box-sizing: border-box;
+    flex: 1 1 0%;
+}
+
+.btn:hover{
+    transition: 0.7s;
+    cursor: grab;
+    background-color:#F73B11;
+}
+
+#btn-result, #btn-c {
+flex: 2 1 0%;
+}
