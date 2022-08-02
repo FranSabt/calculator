@@ -34,10 +34,16 @@ const operate = (num1, operator, num2) =>{
     }
 }
 
-
 // I think this not will work, I have to investigate events
-const displayVal = (val) =>{
-    let actualDisplay = []
-    actualDisplay.push(val)
-    document.getElementById("actual-num").innerHTML = actualDisplay
+
+const calculator = {
+    actualDisplay : '',
+    displayVal : function(val){
+        this.actualDisplay += val
+        console.log(val)
+        document.getElementById('actual-num').innerHTML = calculator.actualDisplay
+    },
 }
+
+document.getElementById('actual-num').innerHTML = calculator.actualDisplay
+
