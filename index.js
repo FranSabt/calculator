@@ -39,11 +39,16 @@ const operate = (num1, operator, num2) =>{
 const calculator = {
     actualDisplay : '',
     displayVal : function(val){
-        this.actualDisplay += val
-        console.log(val)
-        document.getElementById('actual-num').innerHTML = calculator.actualDisplay
+        this.actualDisplay += val;
+        document.getElementById('actual-num').innerHTML = calculator.actualDisplay;
     },
+    callOperator : function(val){
+        prevDisplay = this.actualDisplay + ` ${val}`;
+        document.getElementById('previous-num').innerHTML = prevDisplay;
+        this.actualDisplay = ''
+    }
 }
+document.getElementById("previous-num").innerHTML = 0;
+document.getElementById('actual-num').innerHTML = 0;
 
-document.getElementById('actual-num').innerHTML = calculator.actualDisplay
 
