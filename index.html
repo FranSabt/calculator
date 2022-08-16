@@ -34,14 +34,14 @@
                     </div>
                     <div class="line line-3">
                         <button class="btn" onclick="calculator.displayVal('1')" id="btn-1">1</button>
-                        <button class="btn" onclick="calculator.displayVal('8')" id="btn-2">2</button>
+                        <button class="btn" onclick="calculator.displayVal('2')" id="btn-2">2</button>
                         <button class="btn" onclick="calculator.displayVal('3')" id="btn-3">3</button>
                         <button class="btn" onclick="calculator.callOperator('-')" id="btn--">-</button>
                     </div>
                     <div class="line line-4">
-                        <button class="btn" onclick="calculator.displayVal('c')" id="btn-c">C</button>
-                        <button class="btn" onclick="calculator.displayVal(0)" id="btn-0">0</button>
-                        <button class="btn" onclick="calculator.displayVal('')" id="btn-result">=</button>
+                        <button class="btn" onclick="calculator.Reset()" id="btn-c">C</button>
+                        <button class="btn" onclick="calculator.displayVal('0')" id="btn-0">0</button>
+                        <button class="btn" onclick="calculator.callOperator('=')" id="btn-result">=</button>
                         <button class="btn" onclick="calculator.callOperator('+')" id="btn-+">+</button>
                     </div>
                 </div>

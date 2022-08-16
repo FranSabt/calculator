@@ -39,8 +39,8 @@ const operate = (num1, operator, num2) =>{
 
 
 const calculator = {
-    operator: false,
-    oldOperator: '',
+    operatorState: false,
+    operator: '',
     actualDisplay : '',
     prevDisplay: '',
     displayVal : function(val){
@@ -48,15 +48,41 @@ const calculator = {
         document.getElementById('actual-num').innerHTML = calculator.actualDisplay;
     },
     callOperator : function(val){ // I need to get out the parts that execute the operations
-        if(this.operator = true){
-            let r = operate(this.prevDisplay, this.oldOperator, this.actualDisplay);
-            console.log(r);
-            !this.operator;
+        if(this.operatorState === true && val === '='){
+            let r = operate(this.prevDisplay, this.operator, this.actualDisplay);
+            this.actualDisplay = r;
+            this.operatorState = false;
+            this.operator = ''
+            console.log(this.operatorState + '1')
         }
-        this.prevDisplay = this.actualDisplay;
+        if(this.operatorState === true && this.actualDisplay !== ''){
+            let r = operate(this.prevDisplay, this.operator, this.actualDisplay);
+            this.actualDisplay = r;
+            this.operatorState = false;
+            console.log(this.operatorState + '2')
+        }
+
+        this.actualDisplay !== '' ? this.prevDisplay = this.actualDisplay: this.prevDisplay = this.prevDisplay ;
         document.getElementById('previous-num').innerHTML = this.prevDisplay + ` ${val}`;
         this.actualDisplay = ''
-        this.oldOperator = val;
+        
+        console.log(val);
+        if(val !== '='){
+            this.operator = val;
+            this.operatorState = true;
+        }
+        else{
+            this.operator = '';
+            this.operatorState = false;
+        }
+        console.log(this.operatorState + '123');
+    }, Reset : function(){
+        this.operatorState = false,
+        this.operator = '';
+        this.actualDisplay = ''
+        this.prevDisplay = ''
+        document.getElementById("previous-num").innerHTML = 0;
+        document.getElementById('actual-num').innerHTML = 0;
     }
 }
 document.getElementById("previous-num").innerHTML = 0;
