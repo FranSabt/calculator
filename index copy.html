@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Fran's Calculator</title>
+</head>
+<body>
+    <div class="title-container">
+        <h1>Fran's Calculator</h1>
+    </div>
+    <main>
+        <section class="calculator">
+            <div class="screen">
+                <div class="previous-num" id="previous-num">previous</div>
+                <div class="actual-num" id="actual-num">actual</div>
+            </div>
+            <div class="num-pad">
+                <div class="lines">
+                    <div class="line line-1">
+                        <button class="btn" onclick="calculator.displayVal('7')" id="btn-7">7</button>
+                        <button class="btn" onclick="calculator.displayVal('8')" id="btn-5">8</button>
+                        <button class="btn" onclick="calculator.displayVal('9')" id="btn-9">9</button>
+                        <button class="btn" onclick="calculator.callOperator('/')" id="btn-/">/</button>
+                    </div>
+                    <div class="line line-2">
+                        <button class="btn" onclick="calculator.displayVal('4')" id="btn-4">4</button>
+                        <button class="btn" onclick="calculator.displayVal('5')" id="btn-5">5</button>
+                        <button class="btn" onclick="calculator.displayVal('6')" id="btn-6">6</button>
+                        <button class="btn" onclick="calculator.callOperator('*')" id="btn-*">*</button>
+                    </div>
+                    <div class="line line-3">
+                        <button class="btn" onclick="calculator.displayVal('1')" id="btn-1">1</button>
+                        <button class="btn" onclick="calculator.displayVal('2')" id="btn-2">2</button>
+                        <button class="btn" onclick="calculator.displayVal('3')" id="btn-3">3</button>
+                        <button class="btn" onclick="calculator.callOperator('-')" id="btn--">-</button>
+                    </div>
+                    <div class="line line-4">
+                        <button class="btn" onclick="calculator.Reset()" id="btn-c">C</button>
+                        <button class="btn" onclick="calculator.displayVal('0')" id="btn-0">0</button>
+                        <button class="btn" onclick="calculator.callOperator('=')" id="btn-result">=</button>
+                        <button class="btn" onclick="calculator.callOperator('+')" id="btn-+">+</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>

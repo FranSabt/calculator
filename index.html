@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Fran's Calculator</title>
 </head>
 <body>
@@ -13,41 +14,38 @@
         <h1>Fran's Calculator</h1>
     </div>
     <main>
-        <div class="calculator">
+        <section class="calculator">
             <div class="screen">
                 <div class="previous-num" id="previous-num">previous</div>
                 <div class="actual-num" id="actual-num">actual</div>
             </div>
             <div class="num-pad">
                 <div class="lines">
-                    <div class="line line-1">
-                        <button class="btn" onclick="calculator.displayVal('7')" id="btn-7">7</button>
-                        <button class="btn" onclick="calculator.displayVal('8')" id="btn-5">8</button>
-                        <button class="btn" onclick="calculator.displayVal('9')" id="btn-9">9</button>
-                        <button class="btn" onclick="calculator.callOperator('/')" id="btn-/">/</button>
-                    </div>
-                    <div class="line line-2">
-                        <button class="btn" onclick="calculator.displayVal('4')" id="btn-4">4</button>
-                        <button class="btn" onclick="calculator.displayVal('5')" id="btn-5">5</button>
-                        <button class="btn" onclick="calculator.displayVal('6')" id="btn-6">6</button>
-                        <button class="btn" onclick="calculator.callOperator('*')" id="btn-*">*</button>
-                    </div>
-                    <div class="line line-3">
-                        <button class="btn" onclick="calculator.displayVal('1')" id="btn-1">1</button>
-                        <button class="btn" onclick="calculator.displayVal('2')" id="btn-2">2</button>
-                        <button class="btn" onclick="calculator.displayVal('3')" id="btn-3">3</button>
-                        <button class="btn" onclick="calculator.callOperator('-')" id="btn--">-</button>
-                    </div>
-                    <div class="line line-4">
-                        <button class="btn" onclick="calculator.Reset()" id="btn-c">C</button>
-                        <button class="btn" onclick="calculator.displayVal('0')" id="btn-0">0</button>
-                        <button class="btn" onclick="calculator.callOperator('=')" id="btn-result">=</button>
-                        <button class="btn" onclick="calculator.callOperator('+')" id="btn-+">+</button>
-                    </div>
+                    <div class="div1"><button class="btn" onclick="calculator.displayVal('7')" id="btn-7">7</button> </div>
+                    <div class="div2"><button class="btn" onclick="calculator.displayVal('8')" id="btn-5">8</button> </div>
+                    <div class="div3"><button class="btn" onclick="calculator.displayVal('9')" id="btn-9">9</button></div>
+                    <div class="div4"><button class="btn" onclick="calculator.displayVal('4')" id="btn-4">4</button> </div>
+                    <div class="div5"><button class="btn" onclick="calculator.displayVal('5')" id="btn-5">5</button> </div>
+                    <div class="div6"><button class="btn" onclick="calculator.displayVal('6')" id="btn-6">6</button> </div>
+                    <div class="div7"><button class="btn" onclick="calculator.displayVal('1')" id="btn-1">1</button> </div>
+                    <div class="div8"><button class="btn" onclick="calculator.displayVal('2')" id="btn-2">2</button> </div>
+                    <div class="div9"><button class="btn" onclick="calculator.displayVal('3')" id="btn-3">3</button> </div>
+                    <div class="div10"><button class="btn" onclick="calculator.displayVal('0')" id="btn-0">0</button> </div>
+                    <div class="div11"><button class="btn" onclick="calculator.displayVal('.')" id="btn-0">.</button> </div>
+                    <div class="div12"><button class="btn" onclick="calculator.callOperator('/')" id="btn-/">/</button> </div>
+                    <div class="div13"><button class="btn" onclick="calculator.callOperator('*')" id="btn-*">*</button> </div>
+                    <div class="div14"><button class="btn" onclick="calculator.callOperator('+')" id="btn-+">+</button> </div>
+                    <div class="div15"><button class="btn" onclick="calculator.callOperator('-')" id="btn--">-</button> </div>
+                    <div class="div16"><button class="btn" onclick="calculator.callOperator('=')" id="btn-result">=</button> </div>
+                    <div class="div17"><button class="btn"onclick="calculator.displayVal('b')" id="btn-back"> <= </button></div>
+                    <div class="div18"><button class="btn" onclick="calculator.Reset()" id="btn-c">C</button> </div> 
                 </div>
             </div>
-        </div>
+        </section>
     </main>
+    <footer>
+        <i class="fa fa-github" style="font-size:36px"></i>FranSabt  
+    </footer>
     <script src="index.js"></script>
 </body>
 </html>

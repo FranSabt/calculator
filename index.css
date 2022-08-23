@@ -2,6 +2,11 @@ body{
     background-color: #052F5F;
 }
 
+footer{
+    text-align: center;
+    padding: 2rem;
+}
+
 /* TITLE */
 
 .title-container{
@@ -15,7 +20,7 @@ body{
 h1{
     padding: 0.5em;
     border-radius: 15px;
-    background-color: #052F5F;
+    background-color: #344b64;
 }
 
 /*CAL*/
@@ -30,7 +35,7 @@ main{
 
 .calculator{
     margin-top: 2em;
-    width: 20%;
+    max-width: 40%;
     height: 25em;
     display: flex;
     flex-direction: column;
@@ -53,29 +58,59 @@ main{
 }
 
 .num-pad{
-    margin-top: 0.5em;
-    padding: 0.5em;
+    margin: 0.5em;
+    padding: 1em;
     background-color: #005377;
-    width: 80%;
+    width: auto;
     height: 15em;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     border-radius: 5px;
+    width: fit-content;
 }
 
-.line{
+.lines {
     display: flex;
     flex: 1 1 0%;
-}
+    margin-left: -10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    width: fit-content;
+    height:fit-content;
+    }
+    
+    .div1 { grid-area: 2 / 1 / 3 / 2; }
+    .div2 { grid-area: 2 / 2 / 3 / 3; }
+    .div3 { grid-area: 2 / 3 / 3 / 4; }
+    .div4 { grid-area: 3 / 1 / 4 / 2; }
+    .div5 { grid-area: 3 / 2 / 4 / 3; }
+    .div6 { grid-area: 3 / 3 / 4 / 4; }
+    .div7 { grid-area: 4 / 1 / 5 / 2; }
+    .div8 { grid-area: 4 / 2 / 5 / 3; }
+    .div9 { grid-area: 4 / 3 / 5 / 4; }
+    .div10 { grid-area: 5 / 2 / 6 / 3; }
+    .div11 { grid-area: 5 / 1 / 6 / 2; }
+    .div12 { grid-area: 1 / 4 / 2 / 5; }
+    .div13 { grid-area: 2 / 4 / 3 / 5; }
+    .div14 { grid-area: 3 / 4 / 4 / 5; }
+    .div15 { grid-area: 4 / 4 / 5 / 5; }
+    .div16 { grid-area: 5 / 3 / 6 / 5; }
+    .div17 { grid-area: 1 / 3 / 2 / 4; }
+    .div18 { grid-area: 1 / 1 / 2 / 3; } 
 
 
 .btn{
     background-color: #F1A208 ; /* F1A208 */
-    width: 2rem;
-    height: 2rem;
-    margin-top: 0.5rem;
+    width: 100%;
+    height: 100%;
+    min-width: fit-content;
+    min-height:fit-content;
+    margin: 0.5rem;
     box-sizing: border-box;
     flex: 1 1 0%;
 }
@@ -86,6 +121,4 @@ main{
     background-color:#F73B11;
 }
 
-#btn-result, #btn-c {
-flex: 2 1 0%;
-}
+

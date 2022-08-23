@@ -20,8 +20,8 @@ const divide = (num1, num2) =>{
 
 
 const operate = (num1, operator, num2) =>{
-    num1 = parseInt(num1)
-    num2 = parseInt(num2)
+    num1 = Number(num1)
+    num2 = Number(num2)
     console.log(typeof num1);
     switch(operator){
         case "+":
@@ -44,20 +44,29 @@ const calculator = {
     actualDisplay : '',
     prevDisplay: '',
     displayVal : function(val){
-        this.actualDisplay += val;
+        console.log(val);
+        if(val === 'b' && this.actualDisplay.length > 0){
+            this.actualDisplay = this.actualDisplay.length === 1 ? 
+            '0' :
+            this.actualDisplay.slice(0,this.actualDisplay.length - 1)
+        }
+        if (this.actualDisplay.length <= 12 && val !== 'b'){
+            this.actualDisplay = this.actualDisplay === '0' ? val : this.actualDisplay += val
+        }
+        console.log('display ' + this.actualDisplay);
         document.getElementById('actual-num').innerHTML = calculator.actualDisplay;
     },
     callOperator : function(val){ // I need to get out the parts that execute the operations
         if(this.operatorState === true && val === '='){
             let r = operate(this.prevDisplay, this.operator, this.actualDisplay);
-            this.actualDisplay = r;
+            this.actualDisplay = Number.isInteger(r) ? r : r.toPrecision(6);
             this.operatorState = false;
             this.operator = ''
             console.log(this.operatorState + '1')
         }
         if(this.operatorState === true && this.actualDisplay !== ''){
             let r = operate(this.prevDisplay, this.operator, this.actualDisplay);
-            this.actualDisplay = r;
+            this.actualDisplay = Number.isInteger(r) ? r : r.toPrecision(6);
             this.operatorState = false;
             console.log(this.operatorState + '2')
         }
